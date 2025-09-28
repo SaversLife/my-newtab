@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новая вкладка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="backgroundImage"></div>
+
+    <div id="logo">Google</div>
+
+    <div id="searchboxContainer">
+        <input id="searchbox" type="search" placeholder="Введите поисковый запрос или URL">
+    </div>
+
+    <div id="mostVisited">
+        <div id="container">
+            <!-- Плитки добавляются динамически -->
+        </div>
+        <button id="addShortcut" aria-label="Добавить">
+            <div id="addShortcutIconContainer" class="tile-icon">
+                <div id="addShortcutIcon">+</div>
+            </div>
+            <div class="tile-title">
+                <span>Добавить</span>
+            </div>
+        </button>
+        <dialog id="dialog">
+            <h3>Добавить ярлык</h3>
+            <div id="dialogContent">
+                <label for="dialogInputName">Название:</label>
+                <input id="dialogInputName" type="text">
+                <label for="dialogInputUrl">URL:</label>
+                <input id="dialogInputUrl" type="url">
+            </div>
+            <div id="buttonContainer">
+                <button class="cancel-button">Отмена</button>
+                <button class="action-button" disabled>Готово</button>
+            </div>
+        </dialog>
+        <div id="toast" class="hidden">
+            <span id="toastMessage"></span>
+            <button id="undo">Отмена</button>
+            <button id="restore">Восстановить ярлыки по умолчанию</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
